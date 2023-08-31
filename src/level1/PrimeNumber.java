@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class PrimeNumber {
     public static void main(String[] args) {
-        int n = 5;
+        int n = 9999999;
         System.out.println(new PrimeNumber().solution(n));
 
     }
