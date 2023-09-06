@@ -1,5 +1,8 @@
 public class Test {
     public static void main(String[] args) {
-        System.out.println(7%5);
+        StringBuilder sb = new StringBuilder("abc");
+
+        sb.replace(0,2,"k");
+        System.out.println(sb);
     }
 }
