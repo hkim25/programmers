@@ -42,4 +42,17 @@ public class MakePrimeNumber {
         }
         return set;
     }
+    private boolean[] findPrimeNumber2(int n) {
+        boolean[] arr = new boolean[n+1];
+        for(int i=2; i<Math.sqrt(n)+1; i++){
+            if(!arr[i]){
+                int x=2;
+                for(int j=i*x; j<=n; j=i*x){
+                    arr[j]=!arr[j];
+                    x++;
+                }
+            }
+        }
+        return arr;
+    }
 }
