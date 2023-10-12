@@ -14,4 +14,12 @@ public class FindMeasure {
         if(sqrt%1==0) result--;
         return result;
     }
+
+    boolean[] findMeasure(int n){
+        boolean[] arr = new boolean[n+1];
+        for(int i=1; i<Math.sqrt(n)+1; i++){
+            if(n%i==0) arr[i] = true;
+        }
+        return arr;
+    }
 }

@@ -48,7 +48,7 @@ public class MakePrimeNumber {
             if(!arr[i]){
                 int x=2;
                 for(int j=i*x; j<=n; j=i*x){
-                    arr[j]=!arr[j];
+                    arr[j]=true;
                     x++;
                 }
             }

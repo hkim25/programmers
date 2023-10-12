@@ -1,21 +1,27 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Test {
     public static void main(String[] args) {
-        StringBuilder sb = new StringBuilder();
-        int[] arr = {1,2,3,4,5,6};
-        int length = 2;
-        int first = 0;
-        while(length<arr.length){
-            sb.append(arr[0]);
-            sb.append(arr[1]);
-            sb.append(arr[0]);
-            sb.append(arr[2]);
-            sb.append(arr[0]);
-            sb.append(arr[3]);
-            sb.append(arr[0]);
-            sb.append(arr[4]);
+        int[] numbers = {9, 1, 5, 3, 6, 2};
+        System.out.println(Arrays.toString(new Test().solution(numbers)));
+    }
 
-
+    public int[] solution(int[] numbers) {
+        List<Integer> list = new ArrayList<>();
+        int idx = 0;
+        while(idx<numbers.length){
+            int ele = -1;
+            for(int i=idx+1; i< numbers.length; i++){
+                if(numbers[i]>numbers[idx]){
+                    ele = numbers[i];
+                    break;
+                }
+            }
+            list.add(ele);
+            idx++;
         }
-
+        return list.stream().mapToInt(e->e).toArray();
     }
 }
